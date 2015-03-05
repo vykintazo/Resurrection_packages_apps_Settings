@@ -367,6 +367,11 @@
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
     <string name="shortcuts_applications">Applications</string>
+    <string name="shortcut_action_kill">Kill app</string>
+    <string name="shortcut_action_lastapp">Last app</string>
+    <string name="shortcut_action_assist">Search</string>
+    <string name="shortcut_action_screenshot">Screenshot</string>
+    <string name="shortcut_action_torch">Torch</string>
     <string name="shortcuts_select_custom_app_title">Select custom application</string>
     <string name="shortcuts_icon_picker_type">Select icon type:</string>
     <string name="shortcuts_icon_default">Default</string>
@@ -1004,5 +1009,8 @@
 
     <!-- Slim Shortcuts -->
     <string name="slim_shortcut_picker">Slim Actions</string>
+    <string name="qs_tile_slimaction">SlimAction</string>
+    <string name="qs_slim_action_summary">Add and set the order of SlimActions for SlimAction tile</string>
+    <string name="qs_slim_action_title">SlimActions</string>
 
 </resources>
