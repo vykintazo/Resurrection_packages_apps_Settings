@@ -716,6 +716,10 @@
     <!-- Doze pulse (ambient display) options -->
     <string name="doze_overwrite_value_title">Overwrite value</string>
     <string name="doze_overwrite_value_summary">Allow to overwrite default value with user config</string>
+    <string name="doze_auto_brightness_title">Auto brightness</string>
+    <string name="doze_auto_brightness_summary">Adjusts the brightness of the screen to take into account the ambient light of your surroundings</string>
+    <string name="doze_brightness_category_title">Brightness</string>
+    <string name="doze_brightness_title">Brightness level</string>
 
     <string name="doze_list_mode_title">Doze mode</string>
     <string name="doze_list_mode_summary">Option to configure doze mode</string>
