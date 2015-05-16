@@ -69,7 +69,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String KEY_STATUS_BAR_GREETING_TIMEOUT = "status_bar_greeting_timeout";
     private static final String KEY_LOGO_COLOR = "status_bar_logo_color";
     private static final String PREF_ENABLE_TASK_MANAGER = "enable_task_manager";
-
+    private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
+    
     private SwitchPreference mBlockOnSecureKeyguard;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
@@ -78,6 +79,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private SeekBarPreferenceCham mStatusBarGreetingTimeout;
     private ColorPickerPreference mLogoColor;
     private SwitchPreference mEnableTaskManager;
+    private ListPreference mStatusBarPowerMenu;
     private String mCustomGreetingText = "";
 
     private static final String TAG = "StatusBar";
@@ -130,6 +132,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mLogoColor.setSummary(hexColor);
             mLogoColor.setNewPreviewColor(intColor);
+
+        // status bar power menu
+        mStatusBarPowerMenu = (ListPreference) findPreference(STATUS_BAR_POWER_MENU);
+        mStatusBarPowerMenu.setOnPreferenceChangeListener(this);
+        int statusBarPowerMenu = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_POWER_MENU, 0);
+        mStatusBarPowerMenu.setValue(String.valueOf(statusBarPowerMenu));
+        mStatusBarPowerMenu.setSummary(mStatusBarPowerMenu.getEntry());
 
         // Greeting
         mStatusBarGreeting = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_GREETING);
@@ -275,6 +285,16 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mStatusBarPowerMenu) {
+            String statusBarPowerMenu = (String) newValue;
+            int statusBarPowerMenuValue = Integer.parseInt(statusBarPowerMenu);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_POWER_MENU, statusBarPowerMenuValue);
+            int statusBarPowerMenuIndex = mStatusBarPowerMenu
+                    .findIndexOfValue(statusBarPowerMenu);
+            mStatusBarPowerMenu
+                    .setSummary(mStatusBarPowerMenu.getEntries()[statusBarPowerMenuIndex]);
             return true;
         } else if (preference == mStatusBarGreetingTimeout) {
             int timeout = (Integer) newValue;
