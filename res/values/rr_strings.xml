@@ -939,7 +939,7 @@
     <string name="supersu_title">SuperSU</string>
 
     <!-- Pie control -->
-    <string name="pie_control_title">SlimPIE</string>
+    <string name="pie_control_title"><b>Pie control</b></string>
     <string name="pie_control_summary">Enable pie on screen navigation</string>
     <string name="pie_control_size">Navigation size</string>
     <string name="pie_control_trigger_positions">Trigger options</string>
