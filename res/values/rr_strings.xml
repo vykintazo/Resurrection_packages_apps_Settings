@@ -999,6 +999,7 @@
     <string name="additional_options_title">Additional options</string>
 
     <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_tile_powermenu">Power menu</string>
 
     <!-- Navigation bar visibility -->
     <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
