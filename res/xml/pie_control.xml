@@ -30,18 +30,18 @@
         <extra android:name="actionMode" android:value="1" />
         <extra android:name="maxAllowedButtons" android:value="5" />
         <extra android:name="disableDeleteLastEntry" android:value="true" />
-        <extra android:name="fragment" android:value="com.android.settings.aicp.fragments.PieButtonFragment" />
+        <extra android:name="fragment" android:value="com.android.settings.rr.fragments.PieButtonFragment" />
     </PreferenceScreen>
 
     <PreferenceScreen
         android:key="pie_style"
-        android:fragment="com.android.settings.aicp.PieStyleSettings"
+        android:fragment="com.android.settings.rr.PieStyleSettings"
         android:title="@string/pie_style"
         android:dependency="pie_control" />
 
     <PreferenceScreen
         android:key="pie_trigger"
-        android:fragment="com.android.settings.aicp.PieTriggerSettings"
+        android:fragment="com.android.settings.rr.PieTriggerSettings"
         android:title="@string/pie_control_trigger_positions"
         android:dependency="pie_control" />
 
