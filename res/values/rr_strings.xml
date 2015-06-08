@@ -947,7 +947,7 @@
     <string name="pie_control_title"><b>Pie control</b></string>
     <string name="pie_control_summary">Enable pie on screen navigation</string>
     <string name="pie_control_size">Navigation size</string>
-    <string name="pie_control_trigger_positions">Trigger options</string>
+    <string name="pie_control_trigger_positions"><b>Trigger options</b></string>
     <string name="pie_control_trigger_left">Trigger left screen border</string>
     <string name="pie_control_trigger_bottom">Trigger bottom screen border</string>
     <string name="pie_control_trigger_right">Trigger right screen border</string>
@@ -973,7 +973,7 @@
     <string name="pie_background_alpha_title">Background transparency</string>
     <string name="pie_mirror_right_title">Mirror right pie</string>
     <string name="pie_mirror_right_summary">Mirror right pie on the horizontal axis</string>
-    <string name="pie_style">Style and dimension</string>
+    <string name="pie_style"><b>Style and dimension</b></string>
     <string name="pie_style_title">Style</string>
     <string name="pie_dimens_title">Dimension</string>
     <string name="pie_additional_options">Additional options</string>
@@ -983,7 +983,7 @@
     <string name="pie_show_text_summary">Shows phone status, time and date information</string>
     <string name="pie_show_background_title">Show background</string>
     <string name="pie_show_background_summary">Enable pie background screen</string>
-    <string name="pie_button">Buttons</string>
+    <string name="pie_button"><b>Buttons</b></string>
     <string name="pie_button_second_layer">Buttons second layer</string>
     <string name="pie_button_second_layer_summary">Change second layer buttons</string>
     <string name="pie_button_style_summary">Change pie button style</string>
